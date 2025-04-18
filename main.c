@@ -4,20 +4,12 @@
 void ft_putchar(char c);
 void ft_full_line(int size);
 void ft_empty_line(int size);
+void ft_create_square(int size);
 
 int main() {
-	int squareSize = 5;
-	int nbr_empty_line = squareSize - 2;
-	int counter = 0;
-
-	ft_full_line(squareSize);
-
-	while (counter < nbr_empty_line) {
-		ft_empty_line(squareSize);
-		counter++;
-	}
-	ft_full_line(squareSize);
-	return 0;
+	int squareSize = 2;
+	ft_create_square(squareSize);
+		return 0;
 }
 
 
@@ -43,6 +35,25 @@ void ft_empty_line(int size) {
 	}
 	ft_putchar('*');
 	ft_putchar('\n');
-	
-
 }
+
+void ft_create_square(int size) {
+
+		if (size == 1) {
+			ft_full_line(size);
+		}
+
+		else {
+	      	 int nbr_empty_line = size - 2;	        
+    		 int counter = 0; 
+         	 ft_full_line(size);
+
+         	 while (counter < nbr_empty_line) {
+                  ft_empty_line(size);
+                  counter++;
+         	 }
+
+         	 ft_full_line(size);
+	}	
+}
+			
